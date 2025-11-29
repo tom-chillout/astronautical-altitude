@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css'
+
 const pageTitle = "私のAstro学習ブログ"
 ---
 
@@ -9,17 +11,20 @@ const pageTitle = "私のAstro学習ブログ"
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+		<style>
+		</style>
 	</head>
 	<body>
-        <a href="/">ホーム</a>
-        <a href="/about/">概要</a>
-		<a href="/blog/">ブログ</a>
+        <a href="/astronautical-altitude">ホーム</a>
+        <a href="/astronautical-altitude/about">概要</a>
+		<a href="/astronautical-altitude/blog">ブログ</a>
 		<h1>{pageTitle}</h1>
 		<p>ここには、私がAstroを学んでいく旅の様子を投稿します。</p>
 		<ul>
-			<li><a href="/posts/post-1/">2025-11-24 初投稿</a></li>
-			<li><a href="/posts/post-2/">2025-11-24 2</a></li>
-			<li><a href="/posts/post-3/">2025-11-24 3</a></li>
+			<li><a href="/astronautical-altitude/posts/post-1/">2025-11-24 初投稿</a></li>
+			<li><a href="/astronautical-altitude/posts/post-2/">2025-11-24 2</a></li>
+			<li><a href="/astronautical-altitude/posts/post-3/">2025-11-24 3</a></li>
+			<li><a href="/astronautical-altitude/posts/post-4/">2025-11-27 4</a></li>
 		</ul>
 	</body>
 </html>

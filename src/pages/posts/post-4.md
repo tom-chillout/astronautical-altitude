@@ -8,5 +8,6 @@ image:
     alt: "Astroの光線のサムネイル。"
 tags: ["astro", "ブログ", "公開学習"]
 ---
-
+チュートリアルのNetlifyから
 GitHub Pagesに変更できているか検証
+できているっぽい
