@@ -1,4 +1,5 @@
 ---
+import Navigation from '../components/Navigation.astro';
 import '../styles/global.css'
 
 const pageTitle = "私について"
@@ -14,7 +15,7 @@ const skills = ["HTML", "CSS", "JavaScript", "Astro", "ドキュメントの執�
 
 const happy = true;
 const finished = false;
-const goal = 3;
+const goal = 5;
 
 const skillColor = "navy";
 const fontWeight = "bold";
@@ -41,9 +42,7 @@ const textCase = "uppercase";
 		</style>
 	</head>
 	<body>
-        <a href="/astro-portfolio">ホーム</a>
-        <a href="/astro-portfolio/about/">概要</a>
-        <a href="/astro-portfolio/blog/">ブログ</a>
+        <Navigation />
 		<h1>{pageTitle}</h1>
         <h2>... そして私の新しいAstroサイトについて！</h2>
 
@@ -66,6 +65,6 @@ const textCase = "uppercase";
 
 		{finished && <p>I finished this tutorial! このチュートリアルを終えました！</p>}
 
-		{goal === 3 ? <p>My goal is to finish in 3 days. 3日で終えるのが目標です。</p> : <p>My goal is not 3 days. 3日が目標ではありません。</p>}
+		{goal === 3 ? <p>My goal is to finish in 3 days. 3日で終えるのが目標です。</p> : <p>My goal is not 3 days. ゆったりします。</p>}
 	</body>
 </html>
