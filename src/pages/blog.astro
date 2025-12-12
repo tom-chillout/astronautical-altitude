@@ -1,29 +1,14 @@
 ---
-import Navigation from '../components/Navigation.astro'
 import '../styles/global.css'
-
+import BaseLayout from '../layouts/BaseLayout.astro'
 const pageTitle = "私のAstro学習ブログ"
 ---
-
-<html lang="ja">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-		<style>
-		</style>
-	</head>
-	<body>
-        <Navigation />
-		<h1>{pageTitle}</h1>
-		<p>ここには、私がAstroを学んでいく旅の様子を投稿します。</p>
-		<ul>
-			<li><a href="/astro-portfolio/posts/post-1/">2025-11-24 初投稿</a></li>
-			<li><a href="/astro-portfolio/posts/post-2/">2025-11-24 2</a></li>
-			<li><a href="/astro-portfolio/posts/post-3/">2025-11-24 3</a></li>
-			<li><a href="/astro-portfolio/posts/post-4/">2025-11-27 4</a></li>
-		</ul>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+	<p>ここには、私がAstroを学んでいく旅の様子を投稿します。</p>
+	<ul>
+		<li><a href="/astro-portfolio/posts/post-1/">2025-11-24 初投稿</a></li>
+		<li><a href="/astro-portfolio/posts/post-2/">2025-11-24 2</a></li>
+		<li><a href="/astro-portfolio/posts/post-3/">2025-11-24 3</a></li>
+		<li><a href="/astro-portfolio/posts/post-4/">2025-11-27 4</a></li>
+	</ul>
+</BaseLayout>

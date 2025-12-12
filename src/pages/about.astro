@@ -1,49 +1,20 @@
 ---
-import Navigation from '../components/Navigation.astro';
+import BaseLayout from '../layouts/BaseLayout.astro'
 import '../styles/global.css'
 
 const pageTitle = "私について"
-
 const identity = {
 	name: "tomochan",
 	country: "日本",
 	occupation: "会社員",
 	hobbies: ["コーヒー","筋トレ"],
 };
-
 const skills = ["HTML", "CSS", "JavaScript", "Astro", "ドキュメントの執筆"];
-
 const happy = true;
 const finished = false;
-const goal = 5;
-
-const skillColor = "navy";
-const fontWeight = "bold";
-const textCase = "uppercase";
+const goal = 3;
 ---
-
-<html lang="ja">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-		<style define:vars={{skillColor, fontWeight, textCase}}>
-			h1 {
-				color: purple;
-				font-size: 4rem;
-			}
-			.skill {
-				color: var(--skillColor);
-				font-weight: var(--fontWeight);
-				text-transform: var(--textCase);
-			}
-		</style>
-	</head>
-	<body>
-        <Navigation />
-		<h1>{pageTitle}</h1>
+<BaseLayout pageTitle={pageTitle}>
         <h2>... そして私の新しいAstroサイトについて！</h2>
 
         <p>私はAstroの入門チュートリアルを進めています。これは私のWebページの2番目のページで、自分で初めて作ったページです！</p>
@@ -65,6 +36,5 @@ const textCase = "uppercase";
 
 		{finished && <p>I finished this tutorial! このチュートリアルを終えました！</p>}
 
-		{goal === 3 ? <p>My goal is to finish in 3 days. 3日で終えるのが目標です。</p> : <p>My goal is not 3 days. ゆったりします。</p>}
-	</body>
-</html>
+		{goal === 3 ? <p>My goal is not 3 days. ゆったりします。</p> : <p>My goal is to finish in 3 days. 3日で終えるのが目標です。</p>}
+</BaseLayout>
